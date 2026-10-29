@@ -1,0 +1,21 @@
+xiaomi-miio-ca4fix
+Copyright 2026 quenthal
+
+This product is a modified copy of the Xiaomi Miio integration
+(homeassistant/components/xiaomi_miio) from Home Assistant Core,
+https://github.com/home-assistant/core, licensed under the Apache License,
+Version 2.0. Copyright the Home Assistant authors and contributors.
+
+The integration was imported unmodified from Home Assistant Core 2026.10.4.
+Changes made in this project:
+
+- custom_components/xiaomi_miio/__init__.py: installs the miIO protocol patch
+  and wraps the default coordinator update method.
+- custom_components/xiaomi_miio/manifest.json: custom integration version,
+  code owner and repository links.
+- custom_components/xiaomi_miio/translations/: generated translation files
+  copied from the Home Assistant Core 2026.10.4 release package.
+- custom_components/xiaomi_miio/miio_patch.py: new file.
+- custom_components/xiaomi_miio/resilience.py: new file.
+
+The full list of changes is in the git history of this repository.
