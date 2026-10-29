@@ -8,7 +8,7 @@
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/quenthal/xiaomi-miio-ca4fix/issues",
   "loggers": ["micloud", "miio"],
-  "requirements": ["construct==2.10.68", "micloud==0.5", "python-miio==0.5.12"],
+  "requirements": ["construct>=2.10.68", "micloud>=0.5", "python-miio>=0.5.12"],
   "version": "2026.10.4-ca4fix.1",
   "zeroconf": ["_miio._udp.local."]
 }

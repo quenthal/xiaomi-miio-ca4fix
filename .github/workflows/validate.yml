@@ -24,3 +24,6 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+          # The xiaomi_miio brand is in the core section of the brands
+          # repository, which HACS does not check for custom integrations.
+          ignore: brands
