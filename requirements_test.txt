@@ -1,0 +1,4 @@
+pytest-homeassistant-custom-component==0.13.375
+python-miio==0.5.12
+construct==2.10.68
+micloud==0.5

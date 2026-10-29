@@ -74,6 +74,8 @@ from .const import (
 )
 from .coordinator import UPDATE_INTERVAL, GatewayDeviceCoordinator
 from .gateway import ConnectXiaomiGateway
+from .miio_patch import install_patch
+from .resilience import with_update_grace
 from .services import async_setup_services
 from .typing import XiaomiMiioConfigEntry, XiaomiMiioRuntimeData
 
@@ -137,6 +139,7 @@ LAZY_DISCOVER_FOR_MODEL = {
 
 async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the component."""
+    install_patch()
     async_setup_services(hass)
     return True
 
@@ -212,7 +215,7 @@ def _async_update_data_default(hass, device):
         except DeviceException as ex:
             raise UpdateFailed(ex) from ex
 
-    return update
+    return with_update_grace(update, device)
 
 
 @dataclass(frozen=True)
