@@ -1,0 +1,595 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ger\u00e4t ist bereits konfiguriert",
+            "incomplete_info": "Unvollst\u00e4ndige Informationen zur Einrichtung des Ger\u00e4ts, kein Host oder Token geliefert.",
+            "not_xiaomi_miio": "Ger\u00e4t wird von der Xiaomi Home-Integration (noch) nicht unterst\u00fctzt.",
+            "unknown": "Unerwarteter Fehler"
+        },
+        "error": {
+            "cannot_connect": "Verbindung fehlgeschlagen",
+            "cloud_credentials_incomplete": "Anmeldedaten unvollst\u00e4ndig, bitte Benutzernamen, Passwort und Serverregion eingeben",
+            "cloud_login_error": "Anmeldung bei Xiaomi Home nicht m\u00f6glich, \u00fcberpr\u00fcfe die Anmeldedaten.",
+            "cloud_no_devices": "Keine Ger\u00e4te in diesem Xiaomi Home-Konto gefunden.",
+            "unknown_device": "Das Ger\u00e4temodell ist nicht bekannt, daher kann das Ger\u00e4t nicht mit dem Konfigurationsablauf eingerichtet werden.",
+            "wrong_token": "Pr\u00fcfsummenfehler, falsches Token"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_country": "Serverregion",
+                    "cloud_password": "Passwort",
+                    "cloud_username": "Benutzername",
+                    "manual": "Manuell konfigurieren (nicht empfohlen)"
+                },
+                "description": "Melde dich bei Xiaomi Home an, siehe {country_servers_url} f\u00fcr die zu verwendende Serverregion."
+            },
+            "connect": {
+                "data": {
+                    "model": "Ger\u00e4temodell"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP-Adresse",
+                    "token": "API-Token"
+                },
+                "description": "Du ben\u00f6tigst das 32 Zeichen lange API-Token, siehe {retrieving_token_url} f\u00fcr Anweisungen. Bitte beachte, dass sich dieses API-Token von dem Schl\u00fcssel unterscheidet, der von der Xiaomi Aqara Integration verwendet wird."
+            },
+            "reauth_confirm": {
+                "description": "Die Xiaomi Home-Integration muss dein Konto neu authentifizieren, um die Token zu aktualisieren oder fehlende Anmeldedaten hinzuzuf\u00fcgen.",
+                "title": "Authentifizierung f\u00fcr {name} abgelaufen"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Ger\u00e4t"
+                },
+                "description": "W\u00e4hle das einzurichtende Xiaomi Home-Ger\u00e4t aus."
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_water_box_attached": {
+                "name": "Mopp angebracht"
+            },
+            "is_water_box_carriage_attached": {
+                "name": "Mopp angebracht"
+            },
+            "is_water_shortage": {
+                "name": "Wasserknappheit"
+            },
+            "no_water": {
+                "name": "Wassertank leer"
+            },
+            "powersupply_attached": {
+                "name": "Stromversorgung"
+            },
+            "ptc_status": {
+                "name": "Status der Zusatzheizung"
+            },
+            "water_tank_detached": {
+                "name": "Wassertank"
+            }
+        },
+        "button": {
+            "reset_dust_filter": {
+                "name": "Staubfilter zur\u00fccksetzen"
+            },
+            "reset_upper_filter": {
+                "name": "Oberen Filter zur\u00fccksetzen"
+            },
+            "reset_vacuum_filter": {
+                "name": "Filter zur\u00fccksetzen"
+            },
+            "reset_vacuum_main_brush": {
+                "name": "Hauptb\u00fcrste zur\u00fccksetzen"
+            },
+            "reset_vacuum_sensor_dirty": {
+                "name": "Sensorreinigung zur\u00fccksetzen"
+            },
+            "reset_vacuum_side_brush": {
+                "name": "Seitenb\u00fcrste zur\u00fccksetzen"
+            }
+        },
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Natur",
+                            "normal": "Normal"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "angle": {
+                "name": "Oszillationswinkel"
+            },
+            "delay_off_countdown": {
+                "name": "Ausschalttimer-Countdown"
+            },
+            "fan_level": {
+                "name": "L\u00fcfterstufe"
+            },
+            "favorite_level": {
+                "name": "Bevorzugte Stufe"
+            },
+            "favorite_rpm": {
+                "name": "Bevorzugte Motordrehzahl"
+            },
+            "led_brightness": {
+                "name": "LED-Helligkeit"
+            },
+            "led_brightness_level": {
+                "name": "LED-Helligkeit"
+            },
+            "motor_speed": {
+                "name": "Motordrehzahl"
+            },
+            "volume": {
+                "name": "Lautst\u00e4rke"
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "name": "Modus",
+                "state": {
+                    "auto": "Auto",
+                    "favorite": "Favorit",
+                    "silent": "Leise"
+                }
+            },
+            "display_orientation": {
+                "name": "Display-Ausrichtung",
+                "state": {
+                    "forward": "Vorw\u00e4rts",
+                    "left": "Links",
+                    "right": "Rechts"
+                }
+            },
+            "led_brightness": {
+                "name": "LED-Helligkeit",
+                "state": {
+                    "bright": "Hell",
+                    "dim": "Schwach",
+                    "off": "Aus"
+                }
+            },
+            "ptc_level": {
+                "name": "Stufe der Zusatzheizung",
+                "state": {
+                    "high": "Hoch",
+                    "low": "Niedrig",
+                    "medium": "Mittel"
+                }
+            }
+        },
+        "sensor": {
+            "actual_speed": {
+                "name": "Tats\u00e4chliche Geschwindigkeit"
+            },
+            "air_quality": {
+                "name": "Luftqualit\u00e4t"
+            },
+            "air_quality_index": {
+                "name": "Luftqualit\u00e4tsindex"
+            },
+            "area": {
+                "name": "Letzter Reinigungsbereich"
+            },
+            "clean_area": {
+                "name": "Aktueller Reinigungsbereich"
+            },
+            "clean_time": {
+                "name": "Aktuelle Reinigungsdauer"
+            },
+            "control_speed": {
+                "name": "Geschwindigkeit steuern"
+            },
+            "count": {
+                "name": "Gesamtanzahl Reinigungen"
+            },
+            "dnd_end": {
+                "name": "DnD-Ende"
+            },
+            "dnd_start": {
+                "name": "DnD-Start"
+            },
+            "duration": {
+                "name": "Dauer der letzten Reinigung"
+            },
+            "dust_collection_count": {
+                "name": "Gesamtanzahl der Staubsammlungen"
+            },
+            "dust_filter_life_remaining": {
+                "name": "Staubfilter-Restkapazit\u00e4t"
+            },
+            "dust_filter_life_remaining_days": {
+                "name": "Verbleibende Lebensdauer des Staubfilters in Tagen"
+            },
+            "favorite_speed": {
+                "name": "Bevorzugte Geschwindigkeit"
+            },
+            "filter_hours_used": {
+                "name": "Filter-Nutzungsdauer"
+            },
+            "filter_left": {
+                "name": "Filter-Restkapazit\u00e4t"
+            },
+            "filter_left_time": {
+                "name": "Filter-Restlebensdauer"
+            },
+            "filter_life_remaining": {
+                "name": "Filter-Restkapazit\u00e4t"
+            },
+            "illuminance": {
+                "name": "Beleuchtungsst\u00e4rke"
+            },
+            "last_clean_end": {
+                "name": "Letztes Reinigungsende"
+            },
+            "last_clean_start": {
+                "name": "Letzter Reinigungsstart"
+            },
+            "load_power": {
+                "name": "Last-Leistung"
+            },
+            "main_brush_left": {
+                "name": "Restkapazit\u00e4t der Hauptb\u00fcrste"
+            },
+            "motor2_speed": {
+                "name": "Zweite Motordrehzahl"
+            },
+            "motor_speed": {
+                "name": "Motordrehzahl"
+            },
+            "purify_volume": {
+                "name": "Reinluft-Volumen"
+            },
+            "sensor_dirty_left": {
+                "name": "Bis Sensorreinigung verbleibend"
+            },
+            "side_brush_left": {
+                "name": "Restkapazit\u00e4t der Seitenb\u00fcrste"
+            },
+            "total_area": {
+                "name": "Gesamter Reinigungsbereich"
+            },
+            "total_duration": {
+                "name": "Gesamtdauer"
+            },
+            "tvoc": {
+                "name": "TVOC"
+            },
+            "upper_filter_life_remaining": {
+                "name": "Restkapazit\u00e4t des oberen Filters"
+            },
+            "upper_filter_life_remaining_days": {
+                "name": "Verbleibende Lebensdauer des oberen Filters in Tagen"
+            },
+            "use_time": {
+                "name": "Nutzungsdauer"
+            },
+            "water_level": {
+                "name": "Wasserstand"
+            }
+        },
+        "switch": {
+            "anion": {
+                "name": "Ionisator"
+            },
+            "auto_detect": {
+                "name": "Automatische Erkennung"
+            },
+            "buzzer": {
+                "name": "Summer"
+            },
+            "child_lock": {
+                "name": "Kindersicherung"
+            },
+            "clean_mode": {
+                "name": "Reinigungsmodus"
+            },
+            "display": {
+                "name": "Anzeige"
+            },
+            "dry": {
+                "name": "Trocknungsmodus"
+            },
+            "ionizer": {
+                "name": "Ionisator"
+            },
+            "learn_mode": {
+                "name": "Lernmodus"
+            },
+            "led": {
+                "name": "LED"
+            },
+            "ptc": {
+                "name": "Zusatzheizung"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cloud_credentials_incomplete": "Anmeldedaten unvollst\u00e4ndig, bitte Benutzernamen, Passwort und Serverregion eingeben"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "cloud_subdevices": "Xiaomi Home-Dienst verwenden, um verbundene Unterger\u00e4te abzurufen"
+                }
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "description": "Setzt die Filter-Restlebensdauer und -Nutzung zur\u00fcck.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Ventilator \u2013 Filter zur\u00fccksetzen"
+        },
+        "fan_set_extra_features": {
+            "description": "Manipuliert ein Speicherregister, das zus\u00e4tzliche Funktionen annonciert. Die Mi Home App wertet den Wert aus. Bei Wert 1 wird in der App eine Funktion namens \u201eTurbomodus\u201c freigeschaltet.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                },
+                "features": {
+                    "description": "Ganzzahl, bekannte Werte sind 0 (Standard) und 1 (Turbomodus).",
+                    "name": "Funktionen"
+                }
+            },
+            "name": "Ventilator \u2013 Zusatzfunktionen aktivieren"
+        },
+        "light_eyecare_mode_off": {
+            "description": "Schaltet den Augenschonmodus einer Leuchte aus (nur EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Augenschonmodus aus"
+        },
+        "light_eyecare_mode_on": {
+            "description": "Schaltet den Augenschonmodus einer Leuchte ein (nur EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Augenschonmodus ein"
+        },
+        "light_night_light_mode_off": {
+            "description": "Schaltet den Nachtlicht-Modus einer Leuchte aus (nur EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Nachtlicht-Modus aus"
+        },
+        "light_night_light_mode_on": {
+            "description": "Schaltet den Nachtlicht-Modus einer Leuchte ein (NUR EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Nachtlicht-Modus ein"
+        },
+        "light_reminder_off": {
+            "description": "Deaktiviert die Erinnerung/Benachrichtigung bei Augenerm\u00fcdung (NUR EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Erinnerung aus"
+        },
+        "light_reminder_on": {
+            "description": "Aktiviert die Erinnerung/Benachrichtigung bei Augenerm\u00fcdung (NUR EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Entit\u00e4t, auf der der Befehl ausgef\u00fchrt werden soll.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Leuchte \u2013 Erinnerung an"
+        },
+        "light_set_delayed_turn_off": {
+            "description": "Stellt das verz\u00f6gerte Ausschalten einer Leuchte ein.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Leuchten-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                },
+                "time_period": {
+                    "description": "Zeitspanne f\u00fcr das verz\u00f6gerte Ausschalten.",
+                    "name": "Zeitspanne"
+                }
+            },
+            "name": "Leuchte \u2013 Verz\u00f6gertes Ausschalten einstellen"
+        },
+        "light_set_scene": {
+            "description": "Legt eine feste Szene fest.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Leuchten-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                },
+                "scene": {
+                    "description": "Nummer der festen Szene.",
+                    "name": "Szene"
+                }
+            },
+            "name": "Leuchte \u2013 Szene einstellen"
+        },
+        "remote_learn_command": {
+            "description": "Lernt einen IR-Befehl. W\u00e4hle **Aktion ausf\u00fchren**, richte die Fernbedienung auf das IR-Ger\u00e4t und der gelernte Befehl wird als Benachrichtigung in der \u00dcbersicht angezeigt.",
+            "fields": {
+                "slot": {
+                    "description": "Definiert den Slot, der zum Speichern des IR-Befehls verwendet wird.",
+                    "name": "Slot"
+                },
+                "timeout": {
+                    "description": "Definiert das Zeitlimit, innerhalb dessen der Befehl gelernt werden muss.",
+                    "name": "Zeitlimit"
+                }
+            },
+            "name": "Fernbedienung \u2013 Befehl lernen"
+        },
+        "remote_set_led_off": {
+            "description": "Schaltet die blaue LED der Fernbedienung aus.",
+            "name": "Fernbedienung \u2013 LED ausschalten"
+        },
+        "remote_set_led_on": {
+            "description": "Schaltet die blaue LED der Fernbedienung ein.",
+            "name": "Fernbedienung \u2013 LED einschalten"
+        },
+        "switch_set_power_mode": {
+            "description": "Legt den Leistungsmodus fest.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                },
+                "mode": {
+                    "description": "Leistungsmodus.",
+                    "name": "Modus"
+                }
+            },
+            "name": "Schalter \u2013 Leistungsmodus einstellen"
+        },
+        "switch_set_power_price": {
+            "description": "Legt den Strompreis fest.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                },
+                "mode": {
+                    "description": "Strompreis.",
+                    "name": "Modus"
+                }
+            },
+            "name": "Schalter \u2013 Strompreis setzen"
+        },
+        "switch_set_wifi_led_off": {
+            "description": "Schaltet die WLAN-LED eines Schalters aus.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Schalter \u2013 WLAN-LED aus"
+        },
+        "switch_set_wifi_led_on": {
+            "description": "Schaltet die WLAN-LED eines Schalters ein.",
+            "fields": {
+                "entity_id": {
+                    "description": "Name der Xiaomi Home-Entit\u00e4t.",
+                    "name": "Entit\u00e4ts-ID"
+                }
+            },
+            "name": "Schalter \u2013 WLAN-LED ein"
+        },
+        "vacuum_clean_segment": {
+            "description": "Beginnt mit der Reinigung der angegebenen Abschnitte/R\u00e4ume.",
+            "fields": {
+                "segments": {
+                    "description": "Die Nummer(n) der zu reinigenden Abschnitte/R\u00e4ume.",
+                    "name": "Abschnitte"
+                }
+            },
+            "name": "Staubsauger \u2013 Abschnitt reinigen"
+        },
+        "vacuum_clean_zone": {
+            "description": "Startet den Reinigungsvorgang in den ausgew\u00e4hlten Bereichen f\u00fcr die angegebene Anzahl von Wiederholungen.",
+            "fields": {
+                "repeats": {
+                    "description": "Anzahl der Reinigungswiederholungen f\u00fcr jede Zone.",
+                    "name": "Wiederholungen"
+                },
+                "zone": {
+                    "description": "Array von Zonen. Jede Zone ist ein Array mit 4 ganzzahligen Werten.",
+                    "name": "Zone"
+                }
+            },
+            "name": "Staubsauger \u2013 Zone reinigen"
+        },
+        "vacuum_goto": {
+            "description": "Sendet den Roboter zu den angegebenen Koordinaten.",
+            "fields": {
+                "x_coord": {
+                    "description": "X-Koordinate.",
+                    "name": "X-Koordinate"
+                },
+                "y_coord": {
+                    "description": "Y-Koordinate.",
+                    "name": "Y-Koordinate"
+                }
+            },
+            "name": "Staubsauger \u2013 Gehe zu"
+        },
+        "vacuum_remote_control_move": {
+            "description": "Steuert den Staubsauger fern, stelle sicher, dass du ihn zuerst mit der Aktion 'Staubsauger \u2013 Fernsteuerung starten' in den Fernsteuerungsmodus versetzt.",
+            "fields": {
+                "duration": {
+                    "description": "Dauer der Bewegung.",
+                    "name": "Dauer"
+                },
+                "rotation": {
+                    "description": "Drehung zwischen -179 Grad und 179 Grad.",
+                    "name": "Drehung"
+                },
+                "velocity": {
+                    "description": "Geschwindigkeit.",
+                    "name": "Geschwindigkeit"
+                }
+            },
+            "name": "Staubsauger \u2013 Bewegung fernsteuern"
+        },
+        "vacuum_remote_control_move_step": {
+            "description": "Steuert den Staubsauger aus der Ferne, macht nur eine Bewegung und h\u00e4lt dann an.",
+            "fields": {
+                "duration": {
+                    "description": "Dauer der Bewegung.",
+                    "name": "Dauer"
+                },
+                "rotation": {
+                    "description": "Drehung.",
+                    "name": "Drehung"
+                },
+                "velocity": {
+                    "description": "Geschwindigkeit.",
+                    "name": "Geschwindigkeit"
+                }
+            },
+            "name": "Staubsauger \u2013 Bewegungsschritt fernsteuern"
+        },
+        "vacuum_remote_control_start": {
+            "description": "Startet die Fernsteuerung des Staubsaugers. Du kannst ihn dann mit der Aktion 'Staubsauger \u2013 Bewegung fernsteuern' bewegen, zum Beenden rufe 'Staubsauger \u2013 Fernsteuerung stoppen' auf.",
+            "name": "Staubsauger \u2013 Fernsteuerung starten"
+        },
+        "vacuum_remote_control_stop": {
+            "description": "Stoppt den Fernsteuerungsmodus des Staubsaugers.",
+            "name": "Staubsauger \u2013 Fernsteuerung stoppen"
+        }
+    }
+}

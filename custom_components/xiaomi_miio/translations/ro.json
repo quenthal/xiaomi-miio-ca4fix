@@ -1,0 +1,53 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Dispozitivul a fost configurat deja",
+            "incomplete_info": "Informa\u021bii incomplete la configurarea dispozivului, nu a fost furnizat niciun host sau token.",
+            "unknown": "Eroare nea\u0219teptat\u0103"
+        },
+        "error": {
+            "cannot_connect": "A e\u0219uat conectarea",
+            "unknown_device": "Numele dispozitivului este necunoscut, nu se poate configura dispozitivul utiliz\u00e2nd fluxul de configurare.",
+            "wrong_token": "Eroare de suma de control (checksum), token gre\u0219it"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Configurare manual\u0103 (nerecomandat\u0103)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Modelul dispozitivului"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Autentificarea a expirat pentru {name}"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "favorite": "Favorit",
+                    "silent": "Silen\u021bios"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "\u00cenainte",
+                    "left": "St\u00e2nga",
+                    "right": "Dreapta"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Luminos",
+                    "dim": "Diminuat"
+                }
+            }
+        }
+    }
+}

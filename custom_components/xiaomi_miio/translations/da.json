@@ -1,0 +1,69 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Enheden er allerede konfigureret",
+            "unknown": "Uventet fejl"
+        },
+        "error": {
+            "cannot_connect": "Forbindelse mislykkedes"
+        },
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Konfigurer manuelt (anbefales ikke)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Enhedsmodel"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP-adresse",
+                    "token": "API-token"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Godkendelse udl\u00f8bet for {name}"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "Auto",
+                    "favorite": "Favorit",
+                    "silent": "Stille"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Frem",
+                    "left": "Venstre",
+                    "right": "H\u00f8jre"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Skarp",
+                    "dim": "D\u00e6mpet",
+                    "off": "Fra"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "H\u00f8j",
+                    "low": "Lav",
+                    "medium": "Mellem"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Illuminans"
+            }
+        }
+    }
+}

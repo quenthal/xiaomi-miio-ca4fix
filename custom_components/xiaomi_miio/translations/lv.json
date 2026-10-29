@@ -1,0 +1,50 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ier\u012bce jau ir konfigur\u0113ta"
+        },
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Konfigur\u0113t manu\u0101li (nav ieteicams)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Ier\u012bces modelis"
+                }
+            },
+            "reauth_confirm": {
+                "title": "{name} beigusies autentifik\u0101cija"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "favorite": "Iecien\u012bt\u0101kais",
+                    "silent": "Kluss"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Uz priek\u0161u",
+                    "left": "Pa kreisi",
+                    "right": "Pa labi"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Gai\u0161s",
+                    "dim": "Aptum\u0161ots"
+                }
+            }
+        }
+    },
+    "services": {
+        "light_set_delayed_turn_off": {
+            "name": "Gaismas aizkav\u0113tas izsl\u0113g\u0161anas iestat\u012bjums"
+        }
+    }
+}

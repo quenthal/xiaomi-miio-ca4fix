@@ -1,0 +1,70 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Thi\u1ebft b\u1ecb \u0111\u00e3 \u0111\u01b0\u1ee3c c\u1ea5u h\u00ecnh",
+            "unknown": "L\u1ed7i kh\u00f4ng mong \u0111\u1ee3i"
+        },
+        "error": {
+            "unknown_device": "Kh\u00f4ng r\u00f5 ki\u1ec3u thi\u1ebft b\u1ecb, kh\u00f4ng th\u1ec3 thi\u1ebft l\u1eadp thi\u1ebft b\u1ecb b\u1eb1ng lu\u1ed3ng c\u1ea5u h\u00ecnh."
+        },
+        "flow_title": "{name}"
+    },
+    "entity": {
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "T\u01b0\u0323 \u0111\u00f4\u0323ng"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "off": "T\u1eaft"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Cao",
+                    "low": "Th\u1ea5p",
+                    "medium": "V\u1eeba"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "\u0110\u1ed9 s\u00e1ng"
+            }
+        }
+    },
+    "services": {
+        "light_reminder_off": {
+            "description": "T\u1eaft ch\u1ee9c n\u0103ng nh\u1eafc nh\u1edf/th\u00f4ng b\u00e1o t\u00ecnh tr\u1ea1ng m\u1ecfi m\u1eaft (CH\u1ec8 C\u00d3 \u0110\u00c8N EYECARE SMART LAMP 2)."
+        },
+        "light_reminder_on": {
+            "description": "B\u1eadt ch\u1ee9c n\u0103ng nh\u1eafc nh\u1edf/th\u00f4ng b\u00e1o t\u00ecnh tr\u1ea1ng m\u1ecfi m\u1eaft (CH\u1ec8 C\u00d3 \u0110\u00c8N EYECARE SMART LAMP 2)."
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "T\u00ean c\u1ee7a th\u1ef1c th\u1ec3 \u0111\u00e8n."
+                }
+            }
+        },
+        "light_set_scene": {
+            "description": "\u0110\u1eb7t m\u1ed9t c\u1ea3nh c\u1ed1 \u0111\u1ecbnh.",
+            "fields": {
+                "entity_id": {
+                    "description": "T\u00ean c\u1ee7a th\u1ef1c th\u1ec3 \u0111\u00e8n.",
+                    "name": "ID th\u1ef1c th\u1ec3"
+                },
+                "scene": {
+                    "description": "S\u1ed1 c\u1ea3nh c\u1ed1 \u0111\u1ecbnh.",
+                    "name": "C\u1ea3nh"
+                }
+            },
+            "name": "C\u1ea3nh thi\u1ebft l\u1eadp \u0111\u00e8n"
+        },
+        "remote_learn_command": {
+            "description": "H\u1ecdc l\u1ec7nh IR, ch\u1ecdn **Th\u1ef1c hi\u1ec7n h\u00e0nh \u0111\u1ed9ng**, h\u01b0\u1edbng \u0111i\u1ec1u khi\u1ec3n t\u1eeb xa v\u00e0o thi\u1ebft b\u1ecb IR v\u00e0 l\u1ec7nh \u0111\u00e3 h\u1ecdc s\u1ebd \u0111\u01b0\u1ee3c hi\u1ec3n th\u1ecb d\u01b0\u1edbi d\u1ea1ng th\u00f4ng b\u00e1o trong T\u1ed5ng quan."
+        }
+    }
+}

@@ -1,0 +1,251 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Gailua dagoeneko konfiguratuta dago",
+            "unknown": "Ustekabeko errorea"
+        },
+        "error": {
+            "cannot_connect": "Konexioak huts egin du",
+            "cloud_no_devices": "Ez da Xiaomi Home kontu honetan gailurik aurkitu."
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_country": "Zerbitzariaren eskualdea",
+                    "cloud_password": "Pasahitza",
+                    "cloud_username": "Erabiltzaile-izena"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Gailu modeloa"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP helbidea",
+                    "token": "API tokena"
+                }
+            },
+            "reauth_confirm": {
+                "title": "{name}-entzako autortza iraungi da"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Gailua"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "normal": "Normala"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "volume": {
+                "name": "Bolumena"
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "name": "Modua",
+                "state": {
+                    "auto": "Automatikoa",
+                    "favorite": "Gogokoa"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "left": "Ezker",
+                    "right": "Eskuin"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Distiratsu",
+                    "off": "Itzalita"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Altua",
+                    "low": "Baxua",
+                    "medium": "Ertaina"
+                }
+            }
+        },
+        "sensor": {
+            "air_quality": {
+                "name": "Airearen kalitatea"
+            },
+            "air_quality_index": {
+                "name": "Aire-kalitatearen indizea"
+            },
+            "illuminance": {
+                "name": "Argitasuna"
+            },
+            "tvoc": {
+                "name": "KOLG"
+            }
+        },
+        "switch": {
+            "child_lock": {
+                "name": "Haur-blokeoa"
+            },
+            "led": {
+                "name": "LED"
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "fan_set_extra_features": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_eyecare_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_eyecare_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_reminder_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Argi-entitatearen izena",
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "light_set_scene": {
+            "fields": {
+                "entity_id": {
+                    "description": "Argi-entitatearen izena",
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "remote_learn_command": {
+            "fields": {
+                "timeout": {
+                    "name": "Denbora-muga"
+                }
+            }
+        },
+        "switch_set_power_mode": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                },
+                "mode": {
+                    "name": "Modua"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                },
+                "mode": {
+                    "name": "Modua"
+                }
+            }
+        },
+        "switch_set_wifi_led_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "switch_set_wifi_led_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entitatearen IDa"
+                }
+            }
+        },
+        "vacuum_clean_zone": {
+            "fields": {
+                "zone": {
+                    "name": "Tokia"
+                }
+            }
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "name": "Iraupena"
+                },
+                "velocity": {
+                    "description": "Abiadura."
+                }
+            }
+        },
+        "vacuum_remote_control_move_step": {
+            "fields": {
+                "duration": {
+                    "name": "Iraupena"
+                },
+                "velocity": {
+                    "description": "Abiadura."
+                }
+            }
+        }
+    }
+}

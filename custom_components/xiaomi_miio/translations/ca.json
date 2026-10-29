@@ -1,0 +1,318 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "[%key::common::config_flow::abort::already_configured_device%]",
+            "incomplete_info": "Informaci\u00f3 incompleta per configurar el dispositiu, no s'ha proporcionat cap amfitri\u00f3 o token.",
+            "unknown": "Error inesperat"
+        },
+        "error": {
+            "cannot_connect": "Ha fallat la connexi\u00f3",
+            "unknown_device": "No es reconeix el model del dispositiu, no es pot configurar el dispositiu mitjan\u00e7ant el flux de configuraci\u00f3.",
+            "wrong_token": "Error de verificaci\u00f3, token erroni"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_password": "Contrasenya",
+                    "cloud_username": "Nom d'usuari",
+                    "manual": "Configuraci\u00f3 manual (no recomanada)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Model de dispositiu"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "Adre\u00e7a IP",
+                    "token": "Token d'API"
+                }
+            },
+            "reauth_confirm": {
+                "title": "L'autenticaci\u00f3 de {name} ha caducat"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Dispositiu"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Natura",
+                            "normal": "Normal"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "name": "Mode",
+                "state": {
+                    "auto": "Auto",
+                    "favorite": "Preferit",
+                    "silent": "Silenci\u00f3s"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Endavant",
+                    "left": "Esquerra",
+                    "right": "Dreta"
+                }
+            },
+            "led_brightness": {
+                "name": "Brillantor del LED",
+                "state": {
+                    "bright": "Llumin\u00f3s",
+                    "dim": "Atenuat",
+                    "off": "OFF"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Alt/a",
+                    "low": "Baix/a",
+                    "medium": "Mitj\u00e0/na"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Il\u00b7luminaci\u00f3"
+            }
+        },
+        "switch": {
+            "led": {
+                "name": "LED"
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                }
+            }
+        },
+        "fan_set_extra_features": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                },
+                "features": {
+                    "name": "Caracter\u00edstiques"
+                }
+            }
+        },
+        "light_eyecare_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            }
+        },
+        "light_eyecare_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            }
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            }
+        },
+        "light_reminder_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                }
+            }
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                },
+                "time_period": {
+                    "name": "Per\u00edode de temps"
+                }
+            },
+            "name": "Configura desactivaci\u00f3 retardada"
+        },
+        "light_set_scene": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                },
+                "scene": {
+                    "name": "Escena"
+                }
+            }
+        },
+        "remote_learn_command": {
+            "fields": {
+                "slot": {
+                    "description": "Defineix la ranura utilitzada per desar la comanda IR.",
+                    "name": "Ranura"
+                },
+                "timeout": {
+                    "name": "Temps m\u00e0xim d'espera"
+                }
+            },
+            "name": "Apr\u00e8n comandament remot"
+        },
+        "remote_set_led_off": {
+            "name": "Desactiva LED remotament"
+        },
+        "remote_set_led_on": {
+            "name": "Activa LED remotament"
+        },
+        "switch_set_power_mode": {
+            "description": "Configura el mode de pot\u00e8ncia.",
+            "fields": {
+                "entity_id": {
+                    "name": "ID de l'entitat"
+                },
+                "mode": {
+                    "description": "Mode de pot\u00e8ncia.",
+                    "name": "Mode"
+                }
+            },
+            "name": "Configura mode de pot\u00e8ncia"
+        },
+        "switch_set_power_price": {
+            "description": "Configura el preu de l'electricitat.",
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                },
+                "mode": {
+                    "description": "Preu de l'electricitat.",
+                    "name": "Mode"
+                }
+            },
+            "name": "Configura preu de l'electricitat"
+        },
+        "switch_set_wifi_led_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            },
+            "name": "Desactiva LED Wi-Fi"
+        },
+        "switch_set_wifi_led_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID d'entitat"
+                }
+            },
+            "name": "Activa LED Wi-Fi"
+        },
+        "vacuum_clean_segment": {
+            "fields": {
+                "segments": {
+                    "name": "Segments"
+                }
+            },
+            "name": "Aspira/neteja segment"
+        },
+        "vacuum_clean_zone": {
+            "description": "Inicia l'operaci\u00f3 de neteja a les zones seleccionades pel nombre de repeticions indicades.",
+            "fields": {
+                "repeats": {
+                    "description": "Nombre de repeticions de neteja per a cada zona.",
+                    "name": "Repeticions"
+                },
+                "zone": {
+                    "description": "Llista de zones. Cada zona \u00e9s una llista de 4 valors enters.",
+                    "name": "Zona"
+                }
+            },
+            "name": "Aspira/neteja zona"
+        },
+        "vacuum_goto": {
+            "fields": {
+                "x_coord": {
+                    "description": "Coordenada-X.",
+                    "name": "Coordenada X"
+                },
+                "y_coord": {
+                    "description": "Coordenada-Y.",
+                    "name": "Coordenada Y."
+                }
+            },
+            "name": "V\u00e9s a (aspirador)"
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "description": "Durada del moviment.",
+                    "name": "Durada"
+                },
+                "rotation": {
+                    "description": "Rotaci\u00f3, entre -179 i 179 graus.",
+                    "name": "Rotaci\u00f3."
+                },
+                "velocity": {
+                    "description": "Velocitat.",
+                    "name": "Velocitat"
+                }
+            },
+            "name": "Mou remotament aspirador"
+        },
+        "vacuum_remote_control_move_step": {
+            "description": "Controla a dist\u00e0ncia l'aspirador, nom\u00e9s fa un moviment i despr\u00e9s s'atura.",
+            "fields": {
+                "duration": {
+                    "description": "Durada del moviment.",
+                    "name": "Durada"
+                },
+                "rotation": {
+                    "description": "Rotaci\u00f3.",
+                    "name": "Rotaci\u00f3."
+                },
+                "velocity": {
+                    "description": "Velocitat.",
+                    "name": "Velocitat"
+                }
+            },
+            "name": "Mou remotament aspirador, un pas"
+        },
+        "vacuum_remote_control_start": {
+            "name": "Inicia control remota aspirador"
+        },
+        "vacuum_remote_control_stop": {
+            "description": "Atura el control remot de l'aspirador.",
+            "name": "Atura control remot aspirador"
+        }
+    }
+}

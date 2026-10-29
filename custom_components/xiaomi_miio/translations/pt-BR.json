@@ -1,0 +1,203 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "O dispositivo j\u00e1 est\u00e1 configurado",
+            "incomplete_info": "Informa\u00e7\u00f5es incompletas para configurar o dispositivo, nenhum host ou token fornecido.",
+            "unknown": "Erro inesperado"
+        },
+        "error": {
+            "cannot_connect": "Falha ao conectar",
+            "unknown_device": "O modelo do dispositivo n\u00e3o \u00e9 conhecido, n\u00e3o \u00e9 poss\u00edvel configurar o dispositivo usando o fluxo de configura\u00e7\u00e3o.",
+            "wrong_token": "Erro de checksum, token errado"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Configurar manualmente (n\u00e3o recomendado)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Modelo do dispositivo"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Autentica\u00e7\u00e3o expirada para {name}"
+            }
+        }
+    },
+    "entity": {
+        "number": {
+            "volume": {
+                "name": "Volume"
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "favorite": "Favorito",
+                    "silent": "Silencioso"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Para frente",
+                    "left": "Esquerda",
+                    "right": "Direita"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Brilhante",
+                    "dim": "Atenuado",
+                    "off": "Desligado"
+                }
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cloud_credentials_incomplete": "Credenciais incompletas, preencha o nome de usu\u00e1rio, a senha e a regi\u00e3o do servidor"
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "fan_set_extra_features": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade Xiaomi Home.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_eyecare_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_eyecare_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "description": "Desativa o lembrete/notifica\u00e7\u00e3o de fadiga ocular (APENAS EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            },
+            "name": "Desligar lembrete da luz"
+        },
+        "light_reminder_on": {
+            "description": "Ativa o lembrete/notifica\u00e7\u00e3o de fadiga ocular (APENAS EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade sobre a qual atuar.",
+                    "name": "ID da entidade"
+                }
+            },
+            "name": "[%key_id:564326708%] de lembrete ligada"
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade de luz.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "light_set_scene": {
+            "fields": {
+                "entity_id": {
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "remote_learn_command": {
+            "description": "Aprende um comando de infravermelho. Selecione **Executar a\u00e7\u00e3o**, aponte o controle remoto para o dispositivo de infravermelho e o comando aprendido ser\u00e1 exibido como uma notifica\u00e7\u00e3o na Vis\u00e3o geral."
+        },
+        "switch_set_power_mode": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade Xiaomi Home.",
+                    "name": "ID da entidade"
+                },
+                "mode": {
+                    "name": "Modo"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade Xiaomi Home.",
+                    "name": "ID da entidade"
+                },
+                "mode": {
+                    "name": "Modo"
+                }
+            }
+        },
+        "switch_set_wifi_led_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade Xiaomi Home.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "switch_set_wifi_led_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome da entidade Xiaomi Home.",
+                    "name": "ID da entidade"
+                }
+            }
+        },
+        "vacuum_remote_control_move_step": {
+            "fields": {
+                "duration": {
+                    "description": "Dura\u00e7\u00e3o do movimento."
+                },
+                "rotation": {
+                    "name": "Rota\u00e7\u00e3o"
+                },
+                "velocity": {
+                    "description": "Velocidade.",
+                    "name": "Velocidade"
+                }
+            }
+        }
+    }
+}

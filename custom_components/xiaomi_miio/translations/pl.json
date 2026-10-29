@@ -1,0 +1,149 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Urz\u0105dzenie jest ju\u017c skonfigurowane",
+            "incomplete_info": "Niepe\u0142ne informacje do skonfigurowania urz\u0105dzenia, brak nazwy hosta, IP lub tokena.",
+            "unknown": "Nieoczekiwany b\u0142\u0105d"
+        },
+        "error": {
+            "cannot_connect": "Nie mo\u017cna nawi\u0105za\u0107 po\u0142\u0105czenia",
+            "unknown_device": "Model urz\u0105dzenia nie jest znany, nie mo\u017cna skonfigurowa\u0107 urz\u0105dzenia przy u\u017cyciu interfejsu u\u017cytkownika.",
+            "wrong_token": "B\u0142\u0105d sumy kontrolnej, niew\u0142a\u015bciwy token"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Skonfiguruj r\u0119cznie (niezalecane)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Model urz\u0105dzenia"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Autoryzacja wygas\u0142a dla {name}"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_water_box_attached": {
+                "name": "Mop przymocowany"
+            },
+            "is_water_shortage": {
+                "name": "Brak wody"
+            }
+        },
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "naturalny",
+                            "normal": "normalny"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "led_brightness": {
+                "name": "Jasno\u015b\u0107 diody LED"
+            },
+            "led_brightness_level": {
+                "name": "Jasno\u015b\u0107 diody LED"
+            },
+            "motor_speed": {
+                "name": "Pr\u0119dko\u015b\u0107 silnika"
+            },
+            "volume": {
+                "name": "G\u0142o\u015bno\u015b\u0107"
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "favorite": "ulubiony",
+                    "silent": "cichy"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "do przodu",
+                    "left": "w lewo",
+                    "right": "w prawo"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "jasne",
+                    "dim": "ciemne",
+                    "off": "wy\u0142\u0105czono"
+                }
+            }
+        },
+        "sensor": {
+            "area": {
+                "name": "Ostatnio wyczyszczony obszar"
+            },
+            "clean_area": {
+                "name": "Obecnie czyszczony obszar"
+            },
+            "clean_time": {
+                "name": "Czas bie\u017c\u0105cego czyszczenia"
+            },
+            "duration": {
+                "name": "Czas ostatniego czyszczenia"
+            },
+            "illuminance": {
+                "name": "Nat\u0119\u017cenie o\u015bwietlenia"
+            },
+            "last_clean_end": {
+                "name": "Koniec ostatniego czyszczenia"
+            },
+            "last_clean_start": {
+                "name": "Pocz\u0105tek ostatniego czyszczenia"
+            },
+            "motor_speed": {
+                "name": "Pr\u0119dko\u015b\u0107 silnika"
+            }
+        },
+        "switch": {
+            "child_lock": {
+                "name": "Blokada przed dzie\u0107mi"
+            }
+        }
+    },
+    "services": {
+        "switch_set_power_mode": {
+            "fields": {
+                "mode": {
+                    "name": "Tryb"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "fields": {
+                "mode": {
+                    "name": "Tryb"
+                }
+            }
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "name": "Czas trwania"
+                }
+            }
+        },
+        "vacuum_remote_control_move_step": {
+            "fields": {
+                "duration": {
+                    "name": "Czas trwania"
+                }
+            }
+        }
+    }
+}

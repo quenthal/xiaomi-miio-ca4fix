@@ -1,0 +1,121 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Perangkat sudah dikonfigurasi",
+            "incomplete_info": "Informasi tidak lengkap untuk menyiapkan perangkat, tidak ada host atau token yang disediakan.",
+            "unknown": "Kesalahan tak terduga"
+        },
+        "error": {
+            "cannot_connect": "Gagal terhubung",
+            "unknown_device": "Model perangkat tidak diketahui, tidak dapat menyiapkan perangkat menggunakan alur konfigurasi.",
+            "wrong_token": "Kesalahan checksum, token salah"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_password": "Kata Sandi",
+                    "cloud_username": "Nama Pengguna",
+                    "manual": "Konfigurasi secara manual (tidak disarankan)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Model perangkat"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "Alamat IP",
+                    "token": "Token API"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Autentikasi ulang integrasi untuk {name}"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Perangkat"
+                }
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "normal": "Normal"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "Otomatis",
+                    "favorite": "Favorit",
+                    "silent": "Diam"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Maju",
+                    "left": "Kiri",
+                    "right": "Kanan"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Terang",
+                    "dim": "Redup",
+                    "off": "Mati"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Tinggi",
+                    "low": "Rendah",
+                    "medium": "Sedang"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Pencahayaan"
+            }
+        }
+    },
+    "services": {
+        "light_eyecare_mode_off": {
+            "description": "Matikan mode eyecare lampu (HANYA EYECARE SMART LAMP 2)."
+        },
+        "light_eyecare_mode_on": {
+            "description": "Nyalakan mode eyecare lampu (HANYA EYECARE SMART LAMP 2)."
+        },
+        "light_set_scene": {
+            "fields": {
+                "scene": {
+                    "description": "Nomor skenario tetap.",
+                    "name": "Skenario"
+                }
+            }
+        },
+        "switch_set_power_mode": {
+            "fields": {
+                "mode": {
+                    "name": "Mode"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "fields": {
+                "mode": {
+                    "name": "Mode"
+                }
+            }
+        }
+    }
+}

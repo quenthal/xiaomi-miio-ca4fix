@@ -1,0 +1,595 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Ure\u0111aj je ve\u0107 pode\u0161en",
+            "incomplete_info": "Nepotpune informacije za pode\u0161avanje ure\u0111aja \u2013 nije naveden host ili token.",
+            "not_xiaomi_miio": "Ure\u0111aj (jo\u0161) nije podr\u017ean od strane Xiaomi Home integracije.",
+            "unknown": "Neo\u010dekivana gre\u0161ka"
+        },
+        "error": {
+            "cannot_connect": "Povezivanje nije uspelo",
+            "cloud_credentials_incomplete": "Pristupni podaci nisu potpuni; unesite korisni\u010dko ime, lozinku i region servera",
+            "cloud_login_error": "Prijava na Xiaomi Home nije uspela, proverite pristupne podatke.",
+            "cloud_no_devices": "Nijedan ure\u0111aj nije prona\u0111en u ovom Xiaomi Home nalogu.",
+            "unknown_device": "Model ure\u0111aja nije poznat, nije mogu\u0107e podesiti ure\u0111aj pomo\u0107u konfiguracionog toka.",
+            "wrong_token": "Gre\u0161ka kontrolne sume, pogre\u0161an token"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_country": "Region servera",
+                    "cloud_password": "Lozinka",
+                    "cloud_username": "Korisni\u010dko ime",
+                    "manual": "Konfiguri\u0161i ru\u010dno (nije preporu\u010deno)"
+                },
+                "description": "Prijavite se u Xiaomi Home, pogledajte {country_servers_url} za region servera koji treba koristiti."
+            },
+            "connect": {
+                "data": {
+                    "model": "Model ure\u0111aja"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP adresa",
+                    "token": "API token"
+                },
+                "description": "Bi\u0107e vam potreban API token od 32 karaktera, pogledajte {retrieving_token_url} za uputstva. Imajte na umu da se ovaj API token razlikuje od klju\u010da koji koristi Xiaomi Aqara integracija."
+            },
+            "reauth_confirm": {
+                "description": "Xiaomi Home integracija mora ponovo da potvrdi tvoj nalog kako bi a\u017eurirala tokene ili dodala nedostaju\u0107e pristupne podatke.",
+                "title": "Prijava je istekla za {name}"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Ure\u0111aj"
+                },
+                "description": "Izaberite Xiaomi Home ure\u0111aj koji \u017eelite da podesite."
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_water_box_attached": {
+                "name": "Mop je postavljen"
+            },
+            "is_water_box_carriage_attached": {
+                "name": "Mop je postavljen"
+            },
+            "is_water_shortage": {
+                "name": "Nedostatak vode"
+            },
+            "no_water": {
+                "name": "Rezervoar prazan"
+            },
+            "powersupply_attached": {
+                "name": "Napajanje"
+            },
+            "ptc_status": {
+                "name": "Status pomo\u0107nog grejanja"
+            },
+            "water_tank_detached": {
+                "name": "Rezervoar za vodu"
+            }
+        },
+        "button": {
+            "reset_dust_filter": {
+                "name": "Resetuj filter pra\u0161ine"
+            },
+            "reset_upper_filter": {
+                "name": "Resetuj gornji filter"
+            },
+            "reset_vacuum_filter": {
+                "name": "Reset filter"
+            },
+            "reset_vacuum_main_brush": {
+                "name": "Resetuj glavnu \u010detku"
+            },
+            "reset_vacuum_sensor_dirty": {
+                "name": "Resetuj senzor zaprljanosti"
+            },
+            "reset_vacuum_side_brush": {
+                "name": "Resetuj bo\u010dnu \u010detku"
+            }
+        },
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Prirodno",
+                            "normal": "Normalno"
+                        }
+                    }
+                }
+            }
+        },
+        "number": {
+            "angle": {
+                "name": "Ugao oscilacije"
+            },
+            "delay_off_countdown": {
+                "name": "Odbrojavanje odlo\u017eenog isklju\u010divanja"
+            },
+            "fan_level": {
+                "name": "Nivo ventilatora"
+            },
+            "favorite_level": {
+                "name": "Omiljeni nivo"
+            },
+            "favorite_rpm": {
+                "name": "Omiljena brzina motora"
+            },
+            "led_brightness": {
+                "name": "Osvetljenost LED-a"
+            },
+            "led_brightness_level": {
+                "name": "Osvetljenost LED-a"
+            },
+            "motor_speed": {
+                "name": "Brzina motora"
+            },
+            "volume": {
+                "name": "Ja\u010dina zvuka"
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "name": "Re\u017eim",
+                "state": {
+                    "auto": "Automatski",
+                    "favorite": "Omiljeno",
+                    "silent": "Ne\u010dujno"
+                }
+            },
+            "display_orientation": {
+                "name": "Orijentacija prikaza",
+                "state": {
+                    "forward": "Napred",
+                    "left": "Levo",
+                    "right": "Desno"
+                }
+            },
+            "led_brightness": {
+                "name": "Osvetljenost LED-a",
+                "state": {
+                    "bright": "Svetlo",
+                    "dim": "Prigu\u0161eno",
+                    "off": "Isklju\u010deno"
+                }
+            },
+            "ptc_level": {
+                "name": "Nivo pomo\u0107nog grejanja",
+                "state": {
+                    "high": "Visok",
+                    "low": "Nizak",
+                    "medium": "Srednji"
+                }
+            }
+        },
+        "sensor": {
+            "actual_speed": {
+                "name": "Trenutna brzina"
+            },
+            "air_quality": {
+                "name": "Kvalitet vazduha"
+            },
+            "air_quality_index": {
+                "name": "Indeks kvaliteta vazduha"
+            },
+            "area": {
+                "name": "Poslednja o\u010di\u0161\u0107ena oblast"
+            },
+            "clean_area": {
+                "name": "Oblast koja se trenutno \u010disti"
+            },
+            "clean_time": {
+                "name": "Trenutno trajanje \u010di\u0161\u0107enja"
+            },
+            "control_speed": {
+                "name": "Kontroli\u0161i brzinu"
+            },
+            "count": {
+                "name": "Ukupan broj \u010di\u0161\u0107enja"
+            },
+            "dnd_end": {
+                "name": "Kraj DnD re\u017eima"
+            },
+            "dnd_start": {
+                "name": "Po\u010detak DnD re\u017eima"
+            },
+            "duration": {
+                "name": "Trajanje poslednjeg \u010di\u0161\u0107enja"
+            },
+            "dust_collection_count": {
+                "name": "Ukupan broj pra\u017enjenja posude za pra\u0161inu"
+            },
+            "dust_filter_life_remaining": {
+                "name": "Preostali vek filtera za pra\u0161inu"
+            },
+            "dust_filter_life_remaining_days": {
+                "name": "Preostali dani filtera za pra\u0161inu"
+            },
+            "favorite_speed": {
+                "name": "Omiljena brzina"
+            },
+            "filter_hours_used": {
+                "name": "Upotreba filtera"
+            },
+            "filter_left": {
+                "name": "Filter remaining"
+            },
+            "filter_left_time": {
+                "name": "Preostali vek filtera"
+            },
+            "filter_life_remaining": {
+                "name": "Preostali vek filtera"
+            },
+            "illuminance": {
+                "name": "Osvetljenost"
+            },
+            "last_clean_end": {
+                "name": "Poslednji zavr\u0161etak \u010di\u0161\u0107enja\u201c"
+            },
+            "last_clean_start": {
+                "name": "Poslednji po\u010detak \u010di\u0161\u0107enja"
+            },
+            "load_power": {
+                "name": "Snaga optere\u0107enja"
+            },
+            "main_brush_left": {
+                "name": "Glavna \u010detka \u2013 preostalo"
+            },
+            "motor2_speed": {
+                "name": "Brzina drugog motora"
+            },
+            "motor_speed": {
+                "name": "Brzina motora"
+            },
+            "purify_volume": {
+                "name": "Zapremina pre\u010di\u0161\u0107avanja"
+            },
+            "sensor_dirty_left": {
+                "name": "Preostali vek senzora pre \u010di\u0161\u0107enja"
+            },
+            "side_brush_left": {
+                "name": "Preostali vek bo\u010dne \u010detke"
+            },
+            "total_area": {
+                "name": "Ukupna o\u010di\u0161\u0107eno"
+            },
+            "total_duration": {
+                "name": "Ukupno trajanje"
+            },
+            "tvoc": {
+                "name": "TVOC"
+            },
+            "upper_filter_life_remaining": {
+                "name": "Preostali vek gornjeg filtera"
+            },
+            "upper_filter_life_remaining_days": {
+                "name": "Preostali dani veka gornjeg filtera"
+            },
+            "use_time": {
+                "name": "Vreme kori\u0161\u0107enja"
+            },
+            "water_level": {
+                "name": "Nivo vode"
+            }
+        },
+        "switch": {
+            "anion": {
+                "name": "Jonizator"
+            },
+            "auto_detect": {
+                "name": "Automatsko prepoznavanje"
+            },
+            "buzzer": {
+                "name": "Zujalica"
+            },
+            "child_lock": {
+                "name": "De\u010dija za\u0161tita"
+            },
+            "clean_mode": {
+                "name": "Re\u017eim \u010di\u0161\u0107enja"
+            },
+            "display": {
+                "name": "Prikaza"
+            },
+            "dry": {
+                "name": "Re\u017eim odvla\u017eivanja"
+            },
+            "ionizer": {
+                "name": "Jonizator"
+            },
+            "learn_mode": {
+                "name": "Re\u017eim u\u010denja"
+            },
+            "led": {
+                "name": "LED"
+            },
+            "ptc": {
+                "name": "Pomo\u0107no grejanje"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cloud_credentials_incomplete": "Pristupni podaci nisu potpuni; unesite korisni\u010dko ime, lozinku i region servera"
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "cloud_subdevices": "Koristite servis Xiaomi Home za preuzimanje povezanih podure\u0111aja."
+                }
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "description": "Resetuje trajanje i upotrebu filtera",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Resetuj filter ventilatora"
+        },
+        "fan_set_extra_features": {
+            "description": "Manipuli\u0161e registrom skladi\u0161ta koji ogla\u0161ava dodatne funkcije. Aplikacija Mi Home procenjuje vrednost. Funkcija \u2018Turbo re\u017eim\u2019 se otklju\u010dava kada je vrednost 1.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                },
+                "features": {
+                    "description": "Ceo broj,.vrednosti su 0 (podrazumevano) i 1 (turbo re\u017eim).",
+                    "name": "Funkcije"
+                }
+            },
+            "name": "Pode\u0161avanje dodatnih opcija ventilatora"
+        },
+        "light_eyecare_mode_off": {
+            "description": "Isklju\u010duje re\u017eim za\u0161tite o\u010diju na lampi (samo EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Isklju\u010di re\u017eim za\u0161tite o\u010diju"
+        },
+        "light_eyecare_mode_on": {
+            "description": "Uklju\u010duje re\u017eim za\u0161tite o\u010diju na lampi (samo za EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Uklju\u010di re\u017eim za\u0161tite o\u010diju"
+        },
+        "light_night_light_mode_off": {
+            "description": "Isklju\u010duje re\u017eim no\u0107nog svetla na lampi (samo za EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Isklju\u010di re\u017eim no\u0107nog svetla"
+        },
+        "light_night_light_mode_on": {
+            "description": "Uklju\u010duje re\u017eim no\u0107nog svetla na lampi (samo za EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Uklju\u010di re\u017eim no\u0107nog svetla"
+        },
+        "light_reminder_off": {
+            "description": "Onemogu\u0107ava podsetnik/obave\u0161tenje za zamor o\u010diju (samo za EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Podsetnik za svetlo isklju\u010den"
+        },
+        "light_reminder_on": {
+            "description": "Omogu\u0107ava podsetnik/obave\u0161tenje za zamor o\u010diju (samo za EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta nad kojim se izvr\u0161ava akcija.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Podsetnik za svetlo uklju\u010den"
+        },
+        "light_set_delayed_turn_off": {
+            "description": "Pode\u0161ava odlo\u017eeno isklju\u010divanje svetla.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta svetla.",
+                    "name": "ID entiteta"
+                },
+                "time_period": {
+                    "description": "Vremenski period za odlo\u017eeno isklju\u010divanje.",
+                    "name": "Vremenski period"
+                }
+            },
+            "name": "Svetlo \u2013 postavi odlo\u017eeno isklju\u010divanje"
+        },
+        "light_set_scene": {
+            "description": "Postavlja fiksnu scenu.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta svetla.",
+                    "name": "ID entiteta"
+                },
+                "scene": {
+                    "description": "Broj fiksne scene.",
+                    "name": "Scena"
+                }
+            },
+            "name": "Postavi scenu svetla"
+        },
+        "remote_learn_command": {
+            "description": "U\u010di IR komandu. Izaberite 'Izvr\u0161i akciju', usmerite daljinski upravlja\u010d ka IR ure\u0111aju i nau\u010dena komanda \u0107e biti prikazana kao obave\u0161tenje u Pregledu.",
+            "fields": {
+                "slot": {
+                    "description": "Defini\u0161ite mesto koje se koristi za \u010duvanje IR komande.",
+                    "name": "Mesto"
+                },
+                "timeout": {
+                    "description": "Defini\u0161ite vreme do kojeg komanda mora biti nau\u010dena.",
+                    "name": "Vreme \u010dekanja (u sekundama)"
+                }
+            },
+            "name": "Nau\u010di komandu daljinskog"
+        },
+        "remote_set_led_off": {
+            "description": "Isklju\u010duje plavi LED indikator na daljinskom upravlja\u010du.",
+            "name": "Isklju\u010di LED indikator"
+        },
+        "remote_set_led_on": {
+            "description": "Uklju\u010duje plavi LED indikator na daljinskom upravlja\u010du.",
+            "name": "Uklju\u010di LED indikator"
+        },
+        "switch_set_power_mode": {
+            "description": "Postavlja re\u017eim napajanja.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                },
+                "mode": {
+                    "description": "Re\u017eim napajanja.",
+                    "name": "Re\u017eim"
+                }
+            },
+            "name": "Prekida\u010d za postavljanje re\u017eima napajanja"
+        },
+        "switch_set_power_price": {
+            "description": "Postavlja cenu elektri\u010dne energije.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                },
+                "mode": {
+                    "description": "Cena elektri\u010dne energije.",
+                    "name": "Re\u017eim"
+                }
+            },
+            "name": "Prekida\u010d za posavljanje cene elektri\u010dne energije"
+        },
+        "switch_set_wifi_led_off": {
+            "description": "Isklju\u010duje Wi-Fi LED indikator na prekida\u010du.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Isklju\u010di Wi-Fi LED"
+        },
+        "switch_set_wifi_led_on": {
+            "description": "Uklju\u010duje Wi-Fi LED indikator na prekida\u010du.",
+            "fields": {
+                "entity_id": {
+                    "description": "Naziv entiteta u Xiaomi Home integraciji.",
+                    "name": "ID entiteta"
+                }
+            },
+            "name": "Prekida\u010d za uklju\u010divanje Wi-Fi LED indikatora"
+        },
+        "vacuum_clean_segment": {
+            "description": "Pokre\u0107e \u010di\u0161\u0107enje navedenih segmenata/prostorija.",
+            "fields": {
+                "segments": {
+                    "description": "Broj segmenta/sobe za \u010di\u0161\u0107enje.",
+                    "name": "Segmenti"
+                }
+            },
+            "name": "\u010ci\u0161\u0107enje segmenta usisiva\u010dem"
+        },
+        "vacuum_clean_zone": {
+            "description": "Pokre\u0107e \u010di\u0161\u0107enje u izabranim zonama onoliko puta koliko je navedeno u polju za ponavljanje.",
+            "fields": {
+                "repeats": {
+                    "description": "Broj ponavljanja \u010di\u0161\u0107enja za svaku zonu.",
+                    "name": "Ponavljanja"
+                },
+                "zone": {
+                    "description": "Niz zona. Svaka zona je niz od 4 celobrojne vrednosti.",
+                    "name": "Zona"
+                }
+            },
+            "name": "\u010ci\u0161\u0107enje zone usisiva\u010dem"
+        },
+        "vacuum_goto": {
+            "description": "\u0160alje usisiva\u010d na zadate koordinate.",
+            "fields": {
+                "x_coord": {
+                    "description": "X koordinata.",
+                    "name": "X koordinata"
+                },
+                "y_coord": {
+                    "description": "Y koordinata.",
+                    "name": "Y koordinata"
+                }
+            },
+            "name": "Po\u0161alji usisiva\u010d na lokaciju"
+        },
+        "vacuum_remote_control_move": {
+            "description": "Daljinski upravlja usisiva\u010dem, proverite da li ste ga prvo postavili u re\u017eim daljinskog upravljanja pomo\u0107u akcije 'Vacuum remote control start'.",
+            "fields": {
+                "duration": {
+                    "description": "Trajanje kretanja.",
+                    "name": "Trajanje"
+                },
+                "rotation": {
+                    "description": "Rotacija, izme\u0111u -179 i 179 stepeni.",
+                    "name": "Rotacija"
+                },
+                "velocity": {
+                    "description": "Brzina.",
+                    "name": "Brzina kretanja"
+                }
+            },
+            "name": "Daljinsko upravljanje kretanjem usisiva\u010da"
+        },
+        "vacuum_remote_control_move_step": {
+            "description": "Daljinski upravlja usisiva\u010dem, izvr\u0161ava samo jedan pokret i zatim se zaustavlja.",
+            "fields": {
+                "duration": {
+                    "description": "Trajanje kretanja.",
+                    "name": "Trajanje"
+                },
+                "rotation": {
+                    "description": "Rotacija.",
+                    "name": "Rotacija"
+                },
+                "velocity": {
+                    "description": "Brzina.",
+                    "name": "Brzina kretanja"
+                }
+            },
+            "name": "Pomeranje usisiva\u010da daljinskim upravlja\u010dem za jedan korak"
+        },
+        "vacuum_remote_control_start": {
+            "description": "Pokre\u0107e daljinsko upravljanje usisiva\u010dem. Zatim ga mo\u017eete pomerati pomo\u0107u akcije 'Pomeranje usisiva\u010da daljinskim upravlja\u010dem', a kada zavr\u0161ite, koristite 'Zaustavljanje usisiva\u010da daljinskim upravlja\u010dem'.",
+            "name": "Pokretanje usisiva\u010da daljinskim upravlja\u010dem"
+        },
+        "vacuum_remote_control_stop": {
+            "description": "Zaustavlja re\u017eim daljinskog upravljanja usisiva\u010dem.",
+            "name": "Zaustavljanje usisiva\u010da daljinskim upravlja\u010dem"
+        }
+    }
+}

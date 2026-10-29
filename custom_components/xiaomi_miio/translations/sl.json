@@ -1,0 +1,63 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Naprava je \u017ee konfigurirana",
+            "unknown": "Nepri\u010dakovana napaka"
+        },
+        "error": {
+            "cannot_connect": "Povezava ni uspela",
+            "wrong_token": "Napaka kontrolne vsote, napa\u010den \u017eeton"
+        },
+        "step": {
+            "manual": {
+                "data": {
+                    "host": "IP naslov",
+                    "token": "API \u017eeton"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Preverjanje pristnosti za {name} je poteklo"
+            }
+        }
+    },
+    "entity": {
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "Samodejno"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "off": "Izklopljeno"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Osvetljenost"
+            }
+        },
+        "switch": {
+            "clean_mode": {
+                "name": "Na\u010din \u010di\u0161\u010denja"
+            }
+        }
+    },
+    "services": {
+        "switch_set_power_mode": {
+            "fields": {
+                "mode": {
+                    "name": "Na\u010din"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "fields": {
+                "mode": {
+                    "name": "Na\u010din"
+                }
+            }
+        }
+    }
+}

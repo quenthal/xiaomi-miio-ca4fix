@@ -1,0 +1,263 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Apparaat is al geconfigureerd",
+            "incomplete_info": "Onvolledige gegevens voor het instellen van het apparaat; er is geen host of token opgegeven.",
+            "not_xiaomi_miio": "Het apparaat wordt (nog) niet ondersteund door de Xiaomi Home-integratie.",
+            "unknown": "Onverwachte fout"
+        },
+        "error": {
+            "cannot_connect": "Kan geen verbinding maken",
+            "cloud_credentials_incomplete": "Inloggegevens zijn onvolledig. Vul de gebruikersnaam, het wachtwoord en de serverregio in.",
+            "cloud_login_error": "Het is niet gelukt om in te loggen bij Xiaomi Home. Controleer je inloggegevens.",
+            "cloud_no_devices": "Er zijn geen apparaten gevonden in dit Xiaomi Home-account.",
+            "unknown_device": "Het apparaatmodel is niet bekend, kan het apparaat niet instellen met config flow.",
+            "wrong_token": "Checksum-fout, verkeerd token"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "cloud_country": "Serverregio",
+                    "cloud_password": "Wachtwoord",
+                    "cloud_username": "Gebruikersnaam",
+                    "manual": "Handmatig configureren (niet aanbevolen)"
+                },
+                "description": "Log in op de Xiaomi Miio-cloud, zie {country_servers_url} voor de te gebruiken cloudserver."
+            },
+            "connect": {
+                "data": {
+                    "model": "Apparaatmodel"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP-adres",
+                    "token": "API-token"
+                },
+                "description": "Je hebt het 32-tekens lange API-token nodig, zie {retrieving_token_url} voor instructies. Houd er rekening mee dat deze API-token verschilt van de sleutel die wordt gebruikt door de Xiaomi Aqara-integratie."
+            },
+            "reauth_confirm": {
+                "description": "De Xiaomi Home-integratie moet je account opnieuw verifi\u00ebren om de tokens bij te werken of ontbrekende inloggegevens toe te voegen.",
+                "title": "Authenticatie is verlopen voor {name}"
+            },
+            "select": {
+                "data": {
+                    "select_device": "Apparaat"
+                },
+                "description": "Selecteer het Xiaomi Home-apparaat dat je wilt instellen."
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_water_box_attached": {
+                "name": "Dweil bevestigd"
+            },
+            "is_water_box_carriage_attached": {
+                "name": "Dweil bevestigd"
+            }
+        },
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Natuur",
+                            "normal": "Normaal"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "Automatisch",
+                    "favorite": "Voorkeur",
+                    "silent": "Stil"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Vooruit",
+                    "left": "Links",
+                    "right": "Rechts"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Helder",
+                    "dim": "Dimmen",
+                    "off": "Uit"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Hoog",
+                    "low": "Laag",
+                    "medium": "Gemiddeld"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Licht"
+            },
+            "water_level": {
+                "name": "Waterpeil"
+            }
+        }
+    },
+    "options": {
+        "error": {
+            "cloud_credentials_incomplete": "Inloggegevens zijn onvolledig. Vul de gebruikersnaam, het wachtwoord en de serverregio in."
+        },
+        "step": {
+            "init": {
+                "data": {
+                    "cloud_subdevices": "Gebruik de Xiaomi Home-service om aangesloten subapparaten te vinden"
+                }
+            }
+        }
+    },
+    "services": {
+        "fan_set_extra_features": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_eyecare_mode_off": {
+            "description": "Schakelt de oogbeschermingsmodus van een lamp uit (ALLEEN EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_eyecare_mode_on": {
+            "description": "Schakelt de oogbeschermingsmodus van een lamp in (ALLEEN EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "description": "Schakelt de herinnering/notificatie voor oogvermoeidheid uit (ALLEEN VOOR EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_reminder_on": {
+            "description": "Schakelt de herinnering/notificatie voor oogvermoeidheid in (ALLEEN VOOR EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "light_set_scene": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            }
+        },
+        "switch_set_power_mode": {
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                },
+                "mode": {
+                    "name": "Modus"
+                }
+            }
+        },
+        "switch_set_power_price": {
+            "description": "Stelt de energieprijs in.",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                },
+                "mode": {
+                    "description": "Stroomprijs",
+                    "name": "Modus"
+                }
+            }
+        },
+        "switch_set_wifi_led_off": {
+            "description": "Schakelt het wifi-lampje van een switch uit.",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            },
+            "name": "Switch zet wifi-LED uit"
+        },
+        "switch_set_wifi_led_on": {
+            "description": "Schakelt het wifi-lampje van een switch in.",
+            "fields": {
+                "entity_id": {
+                    "name": "Entiteit ID"
+                }
+            },
+            "name": "Switch zet wifi-LED aan"
+        },
+        "vacuum_goto": {
+            "fields": {
+                "x_coord": {
+                    "description": "X co\u00f6rdinaat",
+                    "name": "X co\u00f6rdinaat"
+                },
+                "y_coord": {
+                    "description": "Y co\u00f6rdinaat",
+                    "name": "Y co\u00f6rdinaat"
+                }
+            }
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "name": "Duur"
+                },
+                "rotation": {
+                    "description": "Rotatie, tussen -179 en 179 graden."
+                },
+                "velocity": {
+                    "description": "Snelheid.",
+                    "name": "Snelheid"
+                }
+            }
+        },
+        "vacuum_remote_control_move_step": {
+            "fields": {
+                "duration": {
+                    "name": "Duur"
+                },
+                "velocity": {
+                    "description": "Snelheid.",
+                    "name": "Snelheid"
+                }
+            }
+        }
+    }
+}

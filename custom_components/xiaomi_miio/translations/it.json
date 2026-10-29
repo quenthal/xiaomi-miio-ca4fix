@@ -1,0 +1,351 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Il dispositivo \u00e8 gi\u00e0 configurato",
+            "incomplete_info": "Informazioni incomplete per configurare il dispositivo, nessun host o token fornito.",
+            "unknown": "Errore imprevisto"
+        },
+        "error": {
+            "cannot_connect": "Impossibile connettersi",
+            "unknown_device": "Il modello del dispositivo non \u00e8 noto, non \u00e8 possibile configurare il dispositivo utilizzando il flusso di configurazione.",
+            "wrong_token": "Errore del codice di controllo, token errato"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "Configura manualmente (non consigliato)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Modello del dispositivo"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "Indirizzo IP",
+                    "token": "Token API"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Autenticazione scaduta per {name}"
+            }
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "is_water_box_attached": {
+                "name": "Mocio montato"
+            },
+            "is_water_box_carriage_attached": {
+                "name": "Mocio montato"
+            }
+        },
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Natura",
+                            "normal": "Normale"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "auto": "Automatico",
+                    "favorite": "Preferito",
+                    "silent": "Silenzioso"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Avanti",
+                    "left": "Sinistra",
+                    "right": "Destra"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Luminoso",
+                    "dim": "Attenuata",
+                    "off": "Spento"
+                }
+            },
+            "ptc_level": {
+                "state": {
+                    "high": "Alto/a",
+                    "low": "Basso/a",
+                    "medium": "Medio/a"
+                }
+            }
+        },
+        "sensor": {
+            "illuminance": {
+                "name": "Illuminamento"
+            },
+            "tvoc": {
+                "name": "COV Totale"
+            }
+        },
+        "switch": {
+            "clean_mode": {
+                "name": "Modalit\u00e0 di pulizia"
+            },
+            "led": {
+                "name": "LED"
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "description": "Reimposta la durata e l'utilizzo del filtro.",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Ripristina filtro della ventola"
+        },
+        "fan_set_extra_features": {
+            "description": "Manipola un registro di memoria che pubblicizza funzioni extra. L'app Mi Home valuta il valore. Una funzione chiamata \"modalit\u00e0 turbo\" viene sbloccata nell'app sul valore 1.",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                },
+                "features": {
+                    "description": "I valori interi noti sono 0 (predefinito) e 1 (modalit\u00e0 turbo).",
+                    "name": "Funzionalit\u00e0"
+                }
+            },
+            "name": "Imposta funzionalit\u00e0 extra della ventola"
+        },
+        "light_eyecare_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Modalit\u00e0 Light Eyecare disattiva"
+        },
+        "light_eyecare_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Modalit\u00e0 Light Eyecare attiva"
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "description": "Disattiva il promemoria/notifica dell'affaticamento degli occhi (SOLO EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Promemoria luminoso disattivato"
+        },
+        "light_reminder_on": {
+            "description": "Abilita il promemoria/notifica dell'affaticamento degli occhi (SOLO EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 su cui agire.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Promemoria luminoso attivo"
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 luminosa.",
+                    "name": "ID entit\u00e0"
+                },
+                "time_period": {
+                    "name": "Periodo di tempo"
+                }
+            },
+            "name": "Spegnimento ritardato della luce impostata"
+        },
+        "light_set_scene": {
+            "description": "Imposta una scena fissa.",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 luminosa.",
+                    "name": "ID entit\u00e0"
+                },
+                "scene": {
+                    "description": "Numero della scena stabilita.",
+                    "name": "Scena"
+                }
+            },
+            "name": "Scenario luminoso"
+        },
+        "remote_learn_command": {
+            "fields": {
+                "slot": {
+                    "description": "Definire lo slot utilizzato per salvare il comando IR.",
+                    "name": "Slot"
+                },
+                "timeout": {
+                    "name": "Tempo scaduto"
+                }
+            },
+            "name": "Comando di apprendimento telecomando"
+        },
+        "remote_set_led_off": {
+            "name": "LED del telecomando spento"
+        },
+        "remote_set_led_on": {
+            "name": "Accendi il LED a distanza"
+        },
+        "switch_set_power_mode": {
+            "description": "Imposta la modalit\u00e0 di alimentazione.",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                },
+                "mode": {
+                    "description": "Modalit\u00e0 potenza.",
+                    "name": "Modalit\u00e0"
+                }
+            },
+            "name": "Passa alla modalit\u00e0 di alimentazione"
+        },
+        "switch_set_power_price": {
+            "description": "Imposta il prezzo dell'energia.",
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                },
+                "mode": {
+                    "description": "Prezzo dell'energia.",
+                    "name": "Modalit\u00e0"
+                }
+            },
+            "name": "Interruttore imposta il prezzo della potenza"
+        },
+        "switch_set_wifi_led_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Spegnere il LED Wi-Fi impostato"
+        },
+        "switch_set_wifi_led_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Nome dell'entit\u00e0 Xiaomi Home.",
+                    "name": "ID entit\u00e0"
+                }
+            },
+            "name": "Accendi il LED Wi-Fi"
+        },
+        "vacuum_clean_segment": {
+            "fields": {
+                "segments": {
+                    "name": "Segmenti"
+                }
+            },
+            "name": "Segmento pulito con l'aspirapolvere"
+        },
+        "vacuum_clean_zone": {
+            "description": "Avvia l'operazione di pulizia nelle aree selezionate per il numero di ripetizioni indicato.",
+            "fields": {
+                "repeats": {
+                    "description": "Numero di ripetizioni di pulizia per ciascuna zona.",
+                    "name": "Ripetizioni"
+                },
+                "zone": {
+                    "description": "Matrice di zone. Ogni zona \u00e8 un array di 4 valori interi.",
+                    "name": "Zona"
+                }
+            },
+            "name": "Zona di pulizia dell'aspirapolvere"
+        },
+        "vacuum_goto": {
+            "fields": {
+                "x_coord": {
+                    "description": "Coordinata X.",
+                    "name": "Coordinata X"
+                },
+                "y_coord": {
+                    "description": "Coordinata Y.",
+                    "name": "Coordinata Y"
+                }
+            },
+            "name": "Aspirapolvere vai a"
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "description": "Durata del movimento.",
+                    "name": "Durata"
+                },
+                "rotation": {
+                    "description": "Rotazione, tra -179 gradi e 179 gradi.",
+                    "name": "Rotazione"
+                },
+                "velocity": {
+                    "description": "Velocit\u00e0.",
+                    "name": "Velocit\u00e0"
+                }
+            },
+            "name": "Telecomando di controllo del movimento dell'aspirapolvere"
+        },
+        "vacuum_remote_control_move_step": {
+            "description": "Controlla a distanza l'aspirapolvere, fa solo una mossa e poi si ferma.",
+            "fields": {
+                "duration": {
+                    "description": "Durata del movimento.",
+                    "name": "Durata"
+                },
+                "rotation": {
+                    "description": "Rotazione.",
+                    "name": "Rotazione"
+                },
+                "velocity": {
+                    "description": "Velocit\u00e0.",
+                    "name": "Velocit\u00e0"
+                }
+            },
+            "name": "Passo di spostamento del telecomando dell'aspirapolvere"
+        },
+        "vacuum_remote_control_start": {
+            "name": "Avvia telecomando aspirapolvere"
+        },
+        "vacuum_remote_control_stop": {
+            "description": "Arresta la modalit\u00e0 di controllo a distanza dell'aspirapolvere.",
+            "name": "Arresta telecomando aspirapolvere"
+        }
+    }
+}

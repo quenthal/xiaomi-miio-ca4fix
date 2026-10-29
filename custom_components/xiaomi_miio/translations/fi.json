@@ -1,0 +1,312 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Laite on jo m\u00e4\u00e4ritetty",
+            "incomplete_info": "Puutteelliset tiedot laitteen m\u00e4\u00e4ritt\u00e4miseksi, is\u00e4nt\u00e4\u00e4 tai tunnusta ei ole annettu.",
+            "unknown": "Odottamaton virhe"
+        },
+        "error": {
+            "cannot_connect": "Yhteyden muodostaminen ep\u00e4onnistui",
+            "unknown_device": "Laitteen mallia ei tunneta, joten laitetta ei voida m\u00e4\u00e4ritt\u00e4\u00e4 m\u00e4\u00e4rityspolun avulla.",
+            "wrong_token": "Tarkistusvirhe, v\u00e4\u00e4r\u00e4 merkki"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "cloud": {
+                "data": {
+                    "manual": "M\u00e4\u00e4rit\u00e4 manuaalisesti (ei suositella)"
+                }
+            },
+            "connect": {
+                "data": {
+                    "model": "Laitteen malli"
+                }
+            },
+            "manual": {
+                "data": {
+                    "host": "IP-osoite",
+                    "token": "API-tunnus"
+                }
+            },
+            "reauth_confirm": {
+                "title": "Todennus vanhentui kohteella {name}"
+            }
+        }
+    },
+    "entity": {
+        "fan": {
+            "generic_fan": {
+                "state_attributes": {
+                    "preset_mode": {
+                        "state": {
+                            "nature": "Luonto"
+                        }
+                    }
+                }
+            }
+        },
+        "select": {
+            "airpurifier_mode": {
+                "state": {
+                    "favorite": "Suosikki",
+                    "silent": "Hiljainen"
+                }
+            },
+            "display_orientation": {
+                "state": {
+                    "forward": "Eteenp\u00e4in",
+                    "left": "Vasen",
+                    "right": "Oikea"
+                }
+            },
+            "led_brightness": {
+                "state": {
+                    "bright": "Kirkas",
+                    "dim": "Himme\u00e4",
+                    "off": "Pois"
+                }
+            }
+        }
+    },
+    "services": {
+        "fan_reset_filter": {
+            "description": "Nollaa suodattimen k\u00e4ytt\u00f6i\u00e4n ja k\u00e4yt\u00f6n.",
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Tuulettimen nollaussuodatin"
+        },
+        "fan_set_extra_features": {
+            "description": "Manipuloi varastorekisteri\u00e4, joka mainostaa lis\u00e4ominaisuuksia. Mi Home -sovellus arvioi arvon. Sovelluksessa avataan ominaisuus nimelt\u00e4 \"turbotila\" arvolla 1.",
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                },
+                "features": {
+                    "description": "Kokonaisluku, tunnetut arvot ovat 0 (oletusarvo) ja 1 (turbotila).",
+                    "name": "Ominaisuudet"
+                }
+            },
+            "name": "Tuulettimen lis\u00e4ominaisuudet"
+        },
+        "light_eyecare_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Kevyt silm\u00e4nhoitotila pois p\u00e4\u00e4lt\u00e4"
+        },
+        "light_eyecare_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Kevyt silm\u00e4nhoitotila p\u00e4\u00e4ll\u00e4"
+        },
+        "light_night_light_mode_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            }
+        },
+        "light_night_light_mode_on": {
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            }
+        },
+        "light_reminder_off": {
+            "description": "Poistaa silmien v\u00e4symysmuistutuksen/ilmoituksen k\u00e4yt\u00f6st\u00e4 (VAIN EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Valomuistutus pois p\u00e4\u00e4lt\u00e4"
+        },
+        "light_reminder_on": {
+            "description": "Ottaa k\u00e4ytt\u00f6\u00f6n silmien v\u00e4symysmuistutuksen/ilmoituksen (VAIN EYECARE SMART LAMP 2).",
+            "fields": {
+                "entity_id": {
+                    "description": "Toiminnan kohteena olevan entiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Muistutusvalo p\u00e4\u00e4ll\u00e4"
+        },
+        "light_set_delayed_turn_off": {
+            "fields": {
+                "entity_id": {
+                    "description": "Valoentiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                },
+                "time_period": {
+                    "name": "Ajanjakso"
+                }
+            },
+            "name": "Valo asetettu viiv\u00e4stetty sammutus"
+        },
+        "light_set_scene": {
+            "description": "Asettaa kiinte\u00e4n tilanteen.",
+            "fields": {
+                "entity_id": {
+                    "description": "Valoentiteetin nimi.",
+                    "name": "Kohteen tunnus"
+                },
+                "scene": {
+                    "description": "Kiinte\u00e4n tilanteen numero.",
+                    "name": "Tilanne"
+                }
+            },
+            "name": "Valo aseta tilanne"
+        },
+        "remote_learn_command": {
+            "fields": {
+                "slot": {
+                    "description": "M\u00e4\u00e4rit\u00e4 IR-komennon tallennuspaikka.",
+                    "name": "Aukko"
+                },
+                "timeout": {
+                    "name": "Aikakatkaisu"
+                }
+            },
+            "name": "Kauko-opiskelukomento"
+        },
+        "remote_set_led_off": {
+            "name": "Kaukos\u00e4\u00e4din LED pois"
+        },
+        "remote_set_led_on": {
+            "name": "Kaukos\u00e4\u00e4din LED palaa"
+        },
+        "switch_set_power_mode": {
+            "description": "Asettaa tehotilan.",
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                },
+                "mode": {
+                    "description": "Tehotila.",
+                    "name": "Tila"
+                }
+            },
+            "name": "Kytkin aseta tehotila"
+        },
+        "switch_set_power_price": {
+            "description": "Asettaa s\u00e4hk\u00f6n hinnan.",
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                },
+                "mode": {
+                    "description": "S\u00e4hk\u00f6n hinta.",
+                    "name": "Tila"
+                }
+            },
+            "name": "Kytkin aseta s\u00e4hk\u00f6n hinta"
+        },
+        "switch_set_wifi_led_off": {
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Kytke Wi-Fi-LED pois p\u00e4\u00e4lt\u00e4"
+        },
+        "switch_set_wifi_led_on": {
+            "fields": {
+                "entity_id": {
+                    "name": "Kohteen tunnus"
+                }
+            },
+            "name": "Kytke Wi-Fi-LED p\u00e4\u00e4llem"
+        },
+        "vacuum_clean_segment": {
+            "fields": {
+                "segments": {
+                    "name": "Segmentit"
+                }
+            },
+            "name": "Imurointisegmentti"
+        },
+        "vacuum_clean_zone": {
+            "description": "K\u00e4ynnist\u00e4\u00e4 puhdistustoiminnon valituilla alueilla ilmoitetun m\u00e4\u00e4r\u00e4n toistoja varten.",
+            "fields": {
+                "repeats": {
+                    "description": "Puhdistustoistojen lukum\u00e4\u00e4r\u00e4 jokaiselle alueelle.",
+                    "name": "Toistot"
+                },
+                "zone": {
+                    "description": "Alueiden joukko. Jokainen alue on 4 kokonaislukuarvon joukko.",
+                    "name": "Alue"
+                }
+            },
+            "name": "Imurointialue"
+        },
+        "vacuum_goto": {
+            "fields": {
+                "x_coord": {
+                    "description": "X-koordinaatti.",
+                    "name": "X-koordinaatti"
+                },
+                "y_coord": {
+                    "description": "Y-koordinaatti.",
+                    "name": "Y-koordinaatti"
+                }
+            },
+            "name": "Imuri siirry kohtaan"
+        },
+        "vacuum_remote_control_move": {
+            "fields": {
+                "duration": {
+                    "description": "Liikkeen kesto.",
+                    "name": "Kesto"
+                },
+                "rotation": {
+                    "description": "Kierto -179 asteen ja 179 asteen v\u00e4lill\u00e4.",
+                    "name": "Kierto"
+                },
+                "velocity": {
+                    "description": "Nopeus.",
+                    "name": "Nopeus"
+                }
+            },
+            "name": "Imurin kauko-ohjauksen liike"
+        },
+        "vacuum_remote_control_move_step": {
+            "description": "Kauko-ohjaus ohjaa p\u00f6lynimuria, tekee vain yhden liikkeen ja pys\u00e4htyy sitten.",
+            "fields": {
+                "duration": {
+                    "description": "Liikkeen kesto.",
+                    "name": "Kesto"
+                },
+                "rotation": {
+                    "description": "Kierto.",
+                    "name": "Kierto"
+                },
+                "velocity": {
+                    "description": "Nopeus.",
+                    "name": "Nopeus"
+                }
+            },
+            "name": "Imurin kauko-ohjaukseen siirtovaihe"
+        },
+        "vacuum_remote_control_start": {
+            "name": "Imurin kauko-ohjauksen k\u00e4ynnistys"
+        },
+        "vacuum_remote_control_stop": {
+            "description": "Pys\u00e4ytt\u00e4\u00e4 p\u00f6lynimurin kauko-ohjaustilan.",
+            "name": "Imurin kauko-ohjauksen pys\u00e4ytys"
+        }
+    }
+}
